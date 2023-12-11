@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="951.0" prefWidth="1173.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="fire.guard.analog.fireguard.Task1Controller">
   <tabs>
@@ -13,8 +18,38 @@
         <AnchorPane id="Task1" minHeight="0.0" minWidth="0.0" prefHeight="837.0" prefWidth="1173.0">
                <children>
                   <Label layoutX="21.0" layoutY="51.0" prefHeight="17.0" prefWidth="331.0" text="1. Определим объем газа, вышедшего из емкости:" />
-                  <ChoiceBox id="DropDownList" fx:id="DropDownList" layoutX="211.0" layoutY="10.0" prefHeight="5.0" prefWidth="243.0" />
-                  <Label layoutX="21.0" layoutY="14.0" prefHeight="17.0" prefWidth="237.0" text="Выберите горючий газ" />
+                  <ChoiceBox id="DropDownList" fx:id="dropDownList" layoutX="211.0" layoutY="10.0" prefHeight="5.0" prefWidth="243.0" />
+                  <Label fx:id="welcomeText" layoutX="21.0" layoutY="14.0" prefHeight="17.0" prefWidth="237.0" text="Выберите горючий газ" />
+                  <TextField id="pressureField" fx:id="pressureField" layoutX="47.0" layoutY="80.0" prefHeight="25.0" prefWidth="174.0" promptText="P - давление в емкости, кПа" />
+                  <TextField id="volumeField" fx:id="volumeField" layoutX="258.0" layoutY="80.0" prefHeight="25.0" prefWidth="174.0" promptText="V - объем емкости, м3" />
+                  <Button id="test" fx:id="test" layoutX="1076.0" layoutY="10.0" mnemonicParsing="false" onAction="#onTest" prefHeight="61.0" prefWidth="83.0" text="TEST" />
+                  <Label layoutX="21.0" layoutY="115.0" prefHeight="17.0" prefWidth="380.0" text="2. Определим объём газа, который может поступить в помещение" />
+                  <TextField id="gasConsumptionField" fx:id="gasConsumptionField" layoutX="47.0" layoutY="144.0" prefHeight="25.0" prefWidth="174.0" promptText="q - Расход газа" />
+                  <TextField id="closingTimeField" fx:id="closingTimeField" layoutX="258.0" layoutY="144.0" prefHeight="25.0" prefWidth="174.0" promptText="t - время до отключения " />
+                  <Label layoutX="21.0" layoutY="184.0" prefHeight="17.0" prefWidth="380.0" text="3. Определим объём газа, вышедшего из трубопровода" />
+                  <TextField id="gasConsumptionField" fx:id="maxPressureField" layoutX="47.0" layoutY="213.0" prefHeight="25.0" prefWidth="174.0" promptText="P2 - максимальное давление" />
+                  <HBox layoutX="266.0" layoutY="213.0" prefHeight="30.0" prefWidth="271.0" spacing="10.0">
+                     <children>
+                        <TextField id="lpodvField" fx:id="lpodvField" prefHeight="25.0" prefWidth="62.0" promptText="l подв" />
+                        <TextField id="dpodvField" fx:id="dodvField" prefHeight="25.0" prefWidth="62.0" promptText="d подв" />
+                        <TextField id="lotvField" fx:id="lotvField" prefHeight="25.0" prefWidth="55.0" promptText="l отв" />
+                        <TextField id="dotvField" fx:id="dotvField" prefHeight="25.0" prefWidth="59.0" promptText="d отв" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </HBox>
+                  <Label layoutX="21.0" layoutY="257.0" prefHeight="17.0" prefWidth="380.0" text="4. Определим плотность газа" />
+                  <TextField id="molarVolumeField" fx:id="molarVolumeField" layoutX="47.0" layoutY="286.0" prefHeight="25.0" prefWidth="174.0" promptText="V0 - Молярный объем" />
+                  <TextField id="insideTempField" fx:id="insideTempField" layoutX="246.0" layoutY="286.0" prefHeight="25.0" prefWidth="230.0" promptText="T - температура воздуха в помещении" />
+                  <Label layoutX="19.0" layoutY="327.0" prefHeight="17.0" prefWidth="380.0" text="5. Определим массу газа, поступившего в помещение" />
+                  <TextField id="outGasField" fx:id="outGasField" layoutX="45.0" layoutY="356.0" prefHeight="25.0" prefWidth="174.0" promptText="Va - объем вышедшего газа " />
+                  <TextField id="insideTempField" fx:id="insideTempField1" layoutX="244.0" layoutY="356.0" prefHeight="25.0" prefWidth="230.0" promptText="Vm - объем поступаемого газа" />
+                  <Label layoutX="19.0" layoutY="393.0" prefHeight="17.0" prefWidth="534.0" text="6. Определим массу газа, поступившего в помещение с учетом работы аварийной вентиляции" />
+                  <TextField id="airExchgField" fx:id="airExchgField" layoutX="45.0" layoutY="422.0" prefHeight="25.0" prefWidth="208.0" promptText="А - кратность воздухообмена" />
                </children></AnchorPane>
       </content>
     </Tab>
