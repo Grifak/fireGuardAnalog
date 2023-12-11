@@ -25,22 +25,8 @@ public class Task1Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        for(var item : gasMap.keySet()) {
+        for (var item : gasMap.keySet()) {
             dropDownList.getItems().add(item);
         }
     }
-
-    public void onTest(){
-        try {
-            System.out.println(pressureField.getText());
-            System.out.println(volumeField.getText());
-            System.out.println(gasMap.get(dropDownList.getValue()));
-        }
-        catch(Exception e){
-            e.getCause();
-        }
-
-    }
-
-
 }
