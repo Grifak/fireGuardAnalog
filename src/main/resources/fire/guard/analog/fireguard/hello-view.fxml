@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="951.0" prefWidth="1173.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="fire.guard.analog.fireguard.Task1Controller">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="901.0" prefWidth="1173.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="fire.guard.analog.fireguard.Task1Controller">
   <tabs>
     <Tab text="Задача 1">
       <content>
@@ -22,7 +22,7 @@
                   <Label fx:id="welcomeText" layoutX="21.0" layoutY="14.0" prefHeight="17.0" prefWidth="237.0" text="Выберите горючий газ" />
                   <TextField id="pressureField" fx:id="pressureField" layoutX="47.0" layoutY="80.0" prefHeight="25.0" prefWidth="174.0" promptText="P - давление в емкости, кПа" />
                   <TextField id="volumeField" fx:id="volumeField" layoutX="258.0" layoutY="80.0" prefHeight="25.0" prefWidth="174.0" promptText="V - объем емкости, м3" />
-                  <Button id="test" fx:id="test" layoutX="1076.0" layoutY="10.0" mnemonicParsing="false" onAction="#onTest" prefHeight="61.0" prefWidth="83.0" text="TEST" />
+                  <Button id="test" fx:id="test" layoutX="1026.0" layoutY="302.0" mnemonicParsing="false" onAction="#onTest" prefHeight="182.0" prefWidth="83.0" text="TEST" />
                   <Label layoutX="21.0" layoutY="115.0" prefHeight="17.0" prefWidth="380.0" text="2. Определим объём газа, который может поступить в помещение" />
                   <TextField id="gasConsumptionField" fx:id="gasConsumptionField" layoutX="47.0" layoutY="144.0" prefHeight="25.0" prefWidth="174.0" promptText="q - Расход газа" />
                   <TextField id="closingTimeField" fx:id="closingTimeField" layoutX="258.0" layoutY="144.0" prefHeight="25.0" prefWidth="174.0" promptText="t - время до отключения " />
@@ -50,6 +50,32 @@
                   <TextField id="insideTempField" fx:id="insideTempField1" layoutX="244.0" layoutY="356.0" prefHeight="25.0" prefWidth="230.0" promptText="Vm - объем поступаемого газа" />
                   <Label layoutX="19.0" layoutY="393.0" prefHeight="17.0" prefWidth="534.0" text="6. Определим массу газа, поступившего в помещение с учетом работы аварийной вентиляции" />
                   <TextField id="airExchgField" fx:id="airExchgField" layoutX="45.0" layoutY="422.0" prefHeight="25.0" prefWidth="208.0" promptText="А - кратность воздухообмена" />
+                  <ChoiceBox id="dropDownListZ" fx:id="dropDownListZ" layoutX="211.0" layoutY="476.0" prefHeight="25.0" prefWidth="84.0" />
+                  <Label fx:id="welcomeText1" layoutX="45.0" layoutY="480.0" prefHeight="17.0" prefWidth="147.0" text="Выберите коэффициент" />
+                  <Label layoutX="19.0" layoutY="453.0" prefHeight="17.0" prefWidth="534.0" text="7. Определим коэффициент участия горючего во взрыве Z" />
+                  <Label layoutX="16.0" layoutY="512.0" prefHeight="17.0" prefWidth="380.0" text=" 8. Определим свободный объем помещения Vсв" />
+                  <TextField id="lengthField" fx:id="lengthField" layoutX="42.0" layoutY="541.0" prefHeight="25.0" prefWidth="137.0" promptText="L - длина помещения" />
+                  <TextField id="widthField" fx:id="widthField" layoutX="187.0" layoutY="541.0" prefHeight="25.0" prefWidth="152.0" promptText="B - ширина помещения" />
+                  <TextField id="heightField" fx:id="heightField" layoutX="349.0" layoutY="541.0" prefHeight="25.0" prefWidth="152.0" promptText="H - высота помещения" />
+                  <ChoiceBox id="dropDownListSteh" fx:id="dropDownListSteh" layoutX="211.0" layoutY="602.0" prefHeight="25.0" prefWidth="84.0" />
+                  <Label fx:id="welcomeText11" layoutX="45.0" layoutY="606.0" prefHeight="17.0" prefWidth="147.0" text="Выберите газ" />
+                  <Label layoutX="19.0" layoutY="579.0" prefHeight="17.0" prefWidth="534.0" text="9. Определим стехиометрический коэффициент Сстех, %" />
+                  <TextField id="NxField" fx:id="lengthField1" layoutX="326.0" layoutY="602.0" prefHeight="25.0" prefWidth="93.0" promptText="Nx" />
+                  <TextField id="NoField" fx:id="widthField1" layoutX="446.0" layoutY="602.0" prefHeight="25.0" prefWidth="91.0" promptText="No" />
+                  <Label layoutX="19.0" layoutY="634.0" prefHeight="17.0" prefWidth="534.0" text="10. Коэффициент негерметичности помещения Kн = 3" />
+                  <Label layoutX="19.0" layoutY="669.0" prefHeight="17.0" prefWidth="459.0" text="11. Вычислим избыточное давление взрыва и определим категорию помещения" />
+                  <TextField id="maxPressureField" fx:id="maxPressureField" layoutX="45.0" layoutY="698.0" prefHeight="25.0" prefWidth="174.0" promptText="Pmax " text="900" />
+                  <TextField id="insideTempField" fx:id="startPressureField" layoutX="244.0" layoutY="698.0" prefHeight="25.0" prefWidth="230.0" promptText="P0 " text="101" />
+                  <TextField fx:id="res1" editable="false" layoutX="748.0" layoutY="10.0" />
+                  <TextField fx:id="res2" editable="false" layoutX="748.0" layoutY="80.0" />
+                  <TextField fx:id="res21" editable="false" layoutX="748.0" layoutY="144.0" />
+                  <TextField fx:id="res211" editable="false" layoutX="748.0" layoutY="213.0" />
+                  <TextField fx:id="res212" editable="false" layoutX="748.0" layoutY="286.0" />
+                  <TextField fx:id="res2121" editable="false" layoutX="748.0" layoutY="356.0" />
+                  <TextField fx:id="res2122" editable="false" layoutX="748.0" layoutY="422.0" />
+                  <TextField fx:id="res21221" editable="false" layoutX="748.0" layoutY="529.0" />
+                  <TextField fx:id="res212211" editable="false" layoutX="748.0" layoutY="594.0" />
+                  <TextField fx:id="res2122111" editable="false" layoutX="748.0" layoutY="698.0" />
                </children></AnchorPane>
       </content>
     </Tab>
