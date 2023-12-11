@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<VBox alignment="BOTTOM_CENTER" fillWidth="false" prefHeight="266.0" prefWidth="301.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fire.guard.analog.fireguard.HelloController">
-   <children>
-      <Label fx:id="welcomeText" prefHeight="17.0" prefWidth="120.0" text="Label" />
-      <TextField fx:id="textField" alignment="TOP_RIGHT" onAction="#onHelloButtonClick" />
-      <Button id="button1" mnemonicParsing="false" onAction="#onHelloButtonClick" text="Button" VBox.vgrow="NEVER" />
-   </children>
-</VBox>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="951.0" prefWidth="1173.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="fire.guard.analog.fireguard.Task1Controller">
+  <tabs>
+    <Tab text="Задача 1">
+      <content>
+        <AnchorPane id="Task1" minHeight="0.0" minWidth="0.0" prefHeight="837.0" prefWidth="1173.0">
+               <children>
+                  <Label layoutX="21.0" layoutY="51.0" prefHeight="17.0" prefWidth="331.0" text="1. Определим объем газа, вышедшего из емкости:" />
+                  <ChoiceBox id="DropDownList" fx:id="DropDownList" layoutX="211.0" layoutY="10.0" prefHeight="5.0" prefWidth="243.0" />
+                  <Label layoutX="21.0" layoutY="14.0" prefHeight="17.0" prefWidth="237.0" text="Выберите горючий газ" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Задача 2 ">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
