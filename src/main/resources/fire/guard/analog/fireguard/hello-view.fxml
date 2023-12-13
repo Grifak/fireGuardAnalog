@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="901.0" prefWidth="1173.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="fire.guard.analog.fireguard.Task1Controller">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="901.0" prefWidth="1173.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fire.guard.analog.fireguard.Task2Controller">
   <tabs>
     <Tab text="ГГ">
       <content>
@@ -82,7 +82,7 @@
     </Tab>
     <Tab text="ЛВЖ">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+        <AnchorPane id="Task2" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
                   <ChoiceBox fx:id="listTask2" layoutX="198.0" layoutY="21.0" prefWidth="243.0" />
                   <Label layoutX="33.0" layoutY="25.0" prefHeight="17.0" prefWidth="165.0" text="Выберете вещество:" />

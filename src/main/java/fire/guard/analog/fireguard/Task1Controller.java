@@ -36,4 +36,16 @@ public class Task1Controller implements Initializable {
             dropDownListZ.getItems().add(String.valueOf(item));
         }
     }
+
+    public void onTest(){
+        try {
+            System.out.println(pressureField.getText());
+            System.out.println(volumeField.getText());
+            System.out.println(gasMap.get(dropDownList.getValue()));
+        }
+        catch(Exception e){
+            e.getCause();
+        }
+
+    }
 }
