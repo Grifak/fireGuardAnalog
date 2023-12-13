@@ -29,7 +29,7 @@ public class Task1Controller implements Initializable {
     private final Float[] coefficientZ = {1.0F, 0.5F, 0.3F, 0.0F};
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        for(var item : gasMap.keySet()) {
+        for (var item : gasMap.keySet()) {
             dropDownList.getItems().add(item);
         }
         for(var item : coefficientZ){
@@ -48,6 +48,4 @@ public class Task1Controller implements Initializable {
         }
 
     }
-
-
 }
