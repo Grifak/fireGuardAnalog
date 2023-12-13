@@ -3,9 +3,56 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.Pane?>
 
-
-<Pane prefHeight="880.0" prefWidth="1211.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fire.guard.analog.fireguard.Task2Controller">
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fire.guard.analog.fireguard.Task2Controller">
    <children>
-
+      <Pane prefHeight="880.0" prefWidth="1211.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+         <AnchorPane id="Task2" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <children>
+               <ChoiceBox fx:id="listTask2" layoutX="198.0" layoutY="21.0" prefWidth="243.0" />
+               <Label layoutX="33.0" layoutY="25.0" prefHeight="17.0" prefWidth="165.0" text="Выберете вещество:" />
+               <TextField fx:id="molarMassField" layoutX="470.0" layoutY="22.0" promptText="молярная масса" />
+               <TextField fx:id="densityField" layoutX="844.0" layoutY="22.0" promptText="плотность" />
+               <TextField fx:id="formulaField" editable="false" layoutX="655.0" layoutY="22.0" promptText="формула" />
+               <Label layoutX="33.0" layoutY="60.0" prefHeight="17.0" prefWidth="437.0" text="1. Расчет массы жидкости, которая поступит из аппарата в трубопровод" />
+               <TextField layoutX="36.0" layoutY="88.0" promptText="объем емкости, в м3" />
+               <TextField layoutX="220.0" layoutY="88.0" prefHeight="26.0" prefWidth="200.0" promptText="коэф свободного пространства" />
+               <TextField layoutX="36.0" layoutY="126.0" promptText="длина трубопровода" />
+               <TextField layoutX="220.0" layoutY="126.0" prefHeight="25.0" prefWidth="199.0" promptText="диаметр трубопровода" />
+               <Label layoutX="33.0" layoutY="174.0" prefHeight="17.0" prefWidth="664.0" text="2. Расчет массы жидкости, поступившей в помещение за счет подачи насоса до полного отключения задвижек" />
+               <TextField layoutX="36.0" layoutY="204.0" prefHeight="25.0" prefWidth="200.0" promptText="подача насоса кг/м3" />
+               <TextField layoutX="36.0" layoutY="243.0" prefHeight="26.0" prefWidth="200.0" promptText="время отключения задвижек" />
+               <Label layoutX="33.0" layoutY="286.0" prefHeight="17.0" prefWidth="642.0" text="3. Расчет массы жидкости, поступившей в помещение из технологического блока" />
+               <TextField editable="false" layoutX="514.0" layoutY="101.0" promptText="результат" />
+               <TextField editable="false" layoutX="514.0" layoutY="217.0" promptText="результат" />
+               <TextField editable="false" layoutX="514.0" layoutY="320.0" promptText="результат" />
+               <Label layoutX="35.0" layoutY="360.0" prefHeight="17.0" prefWidth="501.0" text="4. Расчет площади жидкости разлива" />
+               <TextField editable="false" layoutX="514.0" layoutY="392.0" promptText="результат" />
+               <Label layoutX="37.0" layoutY="433.0" prefHeight="17.0" prefWidth="336.0" text="5. Расчет площади испарения жидкости" />
+               <TextField layoutX="34.0" layoutY="462.0" promptText="площадь помещения" />
+               <TextField layoutX="221.0" layoutY="463.0" promptText="площадь зеркала ванны" />
+               <TextField layoutX="34.0" layoutY="507.0" promptText="площадь окр изд" />
+               <TextField layoutX="515.0" layoutY="481.0" promptText="результат" />
+               <Label layoutX="34.0" layoutY="549.0" prefHeight="17.0" prefWidth="419.0" text="6. Расчет интенсивности испарения" />
+               <TextField layoutX="37.0" layoutY="584.0" prefHeight="26.0" prefWidth="169.0" promptText="кратность воздухообмена" />
+               <TextField layoutX="222.0" layoutY="585.0" promptText="длина помещения" />
+               <ChoiceBox fx:id="airSpeedList" accessibleHelp="скорость воздушкого потока" layoutX="38.0" layoutY="641.0" prefHeight="26.0" prefWidth="168.0" />
+               <ChoiceBox fx:id="tempList" accessibleHelp="тепература воздуха" layoutX="224.0" layoutY="641.0" prefHeight="26.0" prefWidth="156.0" />
+               <Label layoutX="52.0" layoutY="624.0" prefHeight="17.0" prefWidth="139.0" text="скорость воздушного потока">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <Label layoutX="221.0" layoutY="624.0" prefHeight="17.0" prefWidth="161.0" text="температура воздуха в помещении">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+            </children></AnchorPane>
+      </Pane>
    </children>
-</Pane>
+</AnchorPane>
