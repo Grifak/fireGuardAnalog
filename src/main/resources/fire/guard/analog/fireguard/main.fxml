@@ -14,7 +14,7 @@
                   <fx:include source="task1.fxml" />
                </content>
             </Tab>
-            <Tab text="Задача 2">
+            <Tab text="ЛВЖ">
                <content>
                   <fx:include source="task2.fxml" />
                </content>
