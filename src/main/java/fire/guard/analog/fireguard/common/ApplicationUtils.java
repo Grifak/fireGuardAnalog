@@ -10,4 +10,12 @@ public class ApplicationUtils {
         }
         return true;
     }
+
+    public Double getDubleFromField(TextField textField){
+        try {
+            return Double.valueOf(textField.getText());
+        }catch (NumberFormatException ex){
+            return Double.valueOf(textField.getText().concat(".0"));
+        }
+    }
 }
