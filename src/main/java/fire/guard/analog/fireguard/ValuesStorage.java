@@ -15,10 +15,6 @@ public class ValuesStorage {
         return Kn;
     }
 
-    public void setKn(Integer kn) {
-        Kn = kn;
-    }
-
     private Integer Kn = 3;
     private Double coefZ;
 

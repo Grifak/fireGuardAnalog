@@ -1,3 +1,5 @@
+
+
 module fire.guard.analog.fireguard {
     requires javafx.controls;
     requires javafx.fxml;
@@ -8,6 +10,8 @@ module fire.guard.analog.fireguard {
     requires org.kordamp.bootstrapfx.core;
     requires org.apache.logging.log4j;
     requires org.apache.logging.log4j.core;
+    requires docx4j;
+
 
     opens fire.guard.analog.fireguard to javafx.fxml;
     exports fire.guard.analog.fireguard;

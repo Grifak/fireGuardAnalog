@@ -9,7 +9,7 @@
    <children>
       <TabPane prefHeight="902.0" prefWidth="1182.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Задача 1">
+          <Tab text="ГГ">
                <content>
                   <fx:include source="task1.fxml" />
                </content>
