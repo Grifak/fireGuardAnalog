@@ -221,7 +221,7 @@ public class Task2Controller implements Initializable {
             Double streamPress = calculator.calcStreamPress(antuanA, antuanB, antuanC, tempVal);
             cache.put(STREEM_PRESS.getName(), streamPress);
 
-            Double molarMass = appUtils.getDubleFromField(molarMassField);
+            Double molarMass = appUtils.getDoubleFromField(molarMassField);
             Double evapRateVal = calculator.calcEvapRate(molarMass, streamPress, airSpeed);
 
             cache.put(EVAP_RATE.getName(), evapRateVal);

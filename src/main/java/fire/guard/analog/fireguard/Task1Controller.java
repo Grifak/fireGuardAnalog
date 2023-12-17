@@ -1,5 +1,6 @@
 package fire.guard.analog.fireguard;
 
+import fire.guard.analog.fireguard.calculator.GasCalculator;
 import fire.guard.analog.fireguard.enums.Task1Stehio;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -152,8 +153,8 @@ public class Task1Controller implements Initializable {
 
             fillResultingValues();
         }
-        catch (ArithmeticException arithmeticException){
-            arithmeticException.getCause();
+        catch (Exception exception){
+            exception.getCause();
             warningLabel.setText("Ошибка в веденных значениях! Попробуйте еще раз");
         }
 
