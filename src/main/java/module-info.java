@@ -11,4 +11,6 @@ module fire.guard.analog.fireguard {
 
     opens fire.guard.analog.fireguard to javafx.fxml;
     exports fire.guard.analog.fireguard;
+    exports fire.guard.analog.fireguard.calculator;
+    opens fire.guard.analog.fireguard.calculator to javafx.fxml;
 }

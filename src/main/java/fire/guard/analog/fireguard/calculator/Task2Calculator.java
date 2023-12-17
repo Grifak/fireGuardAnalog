@@ -30,41 +30,41 @@ public class Task2Calculator {
                                      TextField pipeLenPodv,
                                      TextField pipeLenOtv){
 
-        return appUtils.getDubleFromField(density) *
-                ((appUtils.getDubleFromField(capacityVol) * appUtils.getDubleFromField(freeSpace)) +
-                        ((appUtils.getDubleFromField(pipeLenPodv) * (Math.PI * Math.pow(appUtils.getDubleFromField(diameterPipelinePodv), 2))) / 4) +
-                        ((appUtils.getDubleFromField(pipeLenOtv) * (Math.PI * Math.pow(appUtils.getDubleFromField(diameterPipelineOtv), 2))) / 4));
+        return appUtils.getDoubleFromField(density) *
+                ((appUtils.getDoubleFromField(capacityVol) * appUtils.getDoubleFromField(freeSpace)) +
+                        ((appUtils.getDoubleFromField(pipeLenPodv) * (Math.PI * Math.pow(appUtils.getDoubleFromField(diameterPipelinePodv), 2))) / 4) +
+                        ((appUtils.getDoubleFromField(pipeLenOtv) * (Math.PI * Math.pow(appUtils.getDoubleFromField(diameterPipelineOtv), 2))) / 4));
     }
     public Double calcPumpLiquidMass(TextField density, TextField pumpFeed, TextField shutOffTime){
-        return appUtils.getDubleFromField(density) * appUtils.getDubleFromField(pumpFeed) * appUtils.getDubleFromField(shutOffTime);
+        return appUtils.getDoubleFromField(density) * appUtils.getDoubleFromField(pumpFeed) * appUtils.getDoubleFromField(shutOffTime);
     }
 
     public Double calcTechLiquidMass(TextField pipeLiquidMass, TextField pumpLiquidMass){
-        return appUtils.getDubleFromField(pipeLiquidMass) + appUtils.getDubleFromField(pumpLiquidMass);
+        return appUtils.getDoubleFromField(pipeLiquidMass) + appUtils.getDoubleFromField(pumpLiquidMass);
     }
 
     public Double calcLiquidSpill(TextField densityField, TextField techLiquidMass){
-        return appUtils.getDubleFromField(techLiquidMass)/appUtils.getDubleFromField(densityField) * 1000;
+        return appUtils.getDoubleFromField(techLiquidMass)/appUtils.getDoubleFromField(densityField) * 1000;
     }
 
     public Double calcSRoom(TextField lenRoom, TextField wedRoom){
-        return appUtils.getDubleFromField(lenRoom) * appUtils.getDubleFromField(wedRoom);
+        return appUtils.getDoubleFromField(lenRoom) * appUtils.getDoubleFromField(wedRoom);
     }
 
     public Double calcVRoom(Double sRoom, TextField heiRoom){
-        return sRoom * appUtils.getDubleFromField(heiRoom);
+        return sRoom * appUtils.getDoubleFromField(heiRoom);
     }
 
     public Double calcLiquidEvap(Double sRoom, TextField sOkr, TextField sMirror){
-        return appUtils.getDubleFromField(sMirror) + appUtils.getDubleFromField(sOkr) + sRoom;
+        return appUtils.getDoubleFromField(sMirror) + appUtils.getDoubleFromField(sOkr) + sRoom;
     }
 
     public Double caclAirSpeed(TextField lenRoom, TextField airExchange){
-        return appUtils.getDubleFromField(lenRoom) * appUtils.getDubleFromField(airExchange)/3600;
+        return appUtils.getDoubleFromField(lenRoom) * appUtils.getDoubleFromField(airExchange)/3600;
     }
 
     public Double calcStreamPress(TextField antuanA, TextField antuanB, TextField antuanC, Double temp){
-        return Math.pow(10, appUtils.getDubleFromField(antuanA) - (appUtils.getDubleFromField(antuanB)/(appUtils.getDubleFromField(antuanC) + temp)));
+        return Math.pow(10, appUtils.getDoubleFromField(antuanA) - (appUtils.getDoubleFromField(antuanB)/(appUtils.getDoubleFromField(antuanC) + temp)));
     }
 
     public Double interpolationAirSpeed(Double airSpeed, Double temp){
@@ -101,7 +101,7 @@ public class Task2Calculator {
 
     public Double calcVapourMass(Double massEvap, Double evapTime, TextField airExchange){
         if(evapTime > 3600) evapTime = 3600.0;
-        return massEvap/(1 + appUtils.getDubleFromField(airExchange)/3600 * evapTime);
+        return massEvap/(1 + appUtils.getDoubleFromField(airExchange)/3600 * evapTime);
     }
 
     public Double calcFreeSpace(Double vRoom){
@@ -109,7 +109,7 @@ public class Task2Calculator {
     }
 
     public Double calcVapourDensity(TextField molarMass){
-        return appUtils.getDubleFromField(molarMass)/(22.4 * (1 + (0.00367*61)));
+        return appUtils.getDoubleFromField(molarMass)/(22.4 * (1 + (0.00367*61)));
     }
 
     public Double calcStechCoef(Task2Substance substance){
